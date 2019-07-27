@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../models/transaction.dart';
 import './transaction_list.dart';
 import './new_transaction.dart';
 
@@ -8,12 +9,34 @@ class UserTransactions extends StatefulWidget {
 }
 
 class _UserTransactionsState extends State<UserTransactions> {
+
+  final List<Transaction> _userTransactions = [
+    Transaction(
+        id: 't1', title: 'New Shoes', amount: 250.50, date: DateTime.now()),
+    Transaction(
+        id: 't2', title: 'Groceries', amount: 50.95, date: DateTime.now()),
+  ];
+
+  void _addNewTransaction(String title, double amount) {
+    final newTransaction = Transaction(
+        title: title,
+        amount: amount,
+        date: DateTime.now(),
+        id: DateTime.now().toString()
+    );
+
+    // adding new transaction to transactions list and reloading the UI
+    setState(() {
+      _userTransactions.add(newTransaction);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        NewTransaction(),
-        TransactionList()
+        NewTransaction(_addNewTransaction),
+        TransactionList(_userTransactions)
       ],
     );
   }
