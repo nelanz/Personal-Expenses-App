@@ -16,9 +16,12 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.teal,
           fontFamily: 'Montserrat',
           textTheme: ThemeData.light().textTheme.copyWith(
-                  title: TextStyle(
+              title: TextStyle(
                 fontFamily: 'Montserrat',
                 fontSize: 18,
+              ),
+              button: TextStyle(
+                color: Colors.white,
               )),
           appBarTheme: AppBarTheme(
               textTheme: ThemeData.light().textTheme.copyWith(
@@ -92,7 +95,10 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[Chart(_recentTransactions), TransactionList(_userTransactions)],
+          children: <Widget>[
+            Chart(_recentTransactions),
+            TransactionList(_userTransactions)
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
