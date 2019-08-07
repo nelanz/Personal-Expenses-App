@@ -26,8 +26,9 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(
               textTheme: ThemeData.light().textTheme.copyWith(
                   title: TextStyle(
+                      color: Colors.deepPurple,
                       fontFamily: 'Montserrat',
-                      fontSize: 20,
+                      fontSize: 18,
                       fontWeight: FontWeight.w500)))),
       home: MyHomePage(),
     );
@@ -83,11 +84,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
         title: Text('Personal Expenses'),
         actions: <Widget>[
           IconButton(
             icon: Icon(
               Icons.add,
+              color: Theme.of(context).primaryColor,
             ),
             onPressed: () => _startAddNewTransaction(context),
           )
