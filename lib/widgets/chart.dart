@@ -46,12 +46,13 @@ class Chart extends StatelessWidget {
         padding: EdgeInsets.all(10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: groupedTransactionValues.map((data) =>
-              ChartBar(
+          children: groupedTransactionValues
+              .map((data) => ChartBar(
                   data['day'],
                   data['amount'],
-                  totalSpending == 0.0 ? 0.0 : (data['amount'] as double) / totalSpending)
-          )
+                  totalSpending == 0.0
+                      ? 0.0
+                      : (data['amount'] as double) / totalSpending))
               .toList(),
         ),
       ),
