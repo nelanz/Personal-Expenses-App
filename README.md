@@ -6,11 +6,11 @@ Flutter project made during Flutter &amp; Dart course. **Link:** https://www.ude
 
 This project was made with the instructor during Flutter &amp; Dart Course that I take this summer. I did some changes to the original UI, such as transparent AppBar, colors, fonts, etc. 
 
-![](images\sc1.jpg)
-![](images\sc2.jpg)
-![](images\sc3.jpg)
-![](images\sc4.jpg)
-![](images\sc5.jpg)
+![](images/sc1.jpg)
+![](images/sc2.jpg)
+![](images/sc3.jpg)
+![](images/sc4.jpg)
+![](images/sc5.jpg)
 
 ## Issues and further development
  
