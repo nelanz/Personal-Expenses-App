@@ -45,11 +45,10 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage>{
   final List<Transaction> _userTransactions = [];
 
   bool _showChart = false;
-
   List<Transaction> get _recentTransactions {
     return _userTransactions.where((transaction) {
       return transaction.date
